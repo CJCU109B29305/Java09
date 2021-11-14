@@ -1,24 +1,24 @@
-//從某建構元呼叫另一建構元
 class Caaa{
     private int value;
 
     public Caaa(){
-        //呼叫此建構元vaule = 10
-        System.out.println("vaule = "+value);
+        value = 10; //value 10 (a)
+        System.out.println("value = " + value);
     }
     public Caaa(int i){
-        value = i;
-        System.out.println("vaule = "+value);
+        value = i ;
+        System.out.println("value = " + value);
     }
 }
 
 public class Class03 {
     public static void main(String[]argv){
-        Caaa obj1 = new Caaa();
+        Caaa obj = new Caaa();
         Caaa obj2 = new Caaa(12);
     }
 }
-/*在第6行寫下程式碼，使當沒有引數的建構元Caaa()被呼叫時，value的值被設為10
-  17.18各是哪一個建構元被呼叫
-  第2行是否能宣告public?為甚麼?
-  第3行的value 可以改為public嗎?是否有影響?為甚麼?*/
+/* 
+(b) 16行呼叫第一個建構元 17行呼叫第二個建構元(有引數的原因)
+(c) 不行，一個java檔只能有一個public，且必須跟檔名相同
+(d) 對此範例執行沒有影響，但會被其他Class存取。
+*/

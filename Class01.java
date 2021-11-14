@@ -1,13 +1,31 @@
 class CRectangle{
     int width;
     int height;
+   
+    //(a)
+    void Crectangle(int w,int h) {
+        width = w ;
+        height = h ;
+        System.out.println("width = "+w);
+        System.out.println("height = "+h);
+    }
+    //(b)
+    void crectangle(){
+        width = 6 ;
+        height = 3 ;
+        System.out.println("width = "+width);
+        System.out.println("height = "+height);
+    }
+    //(c)
+    void This(){
+        this.Crectangle(5,4); //this
+    }
 }
 public class Class01{
     public static void main(String[]argv){
-
+        CRectangle cr = new CRectangle();
+        cr.Crectangle(10,8); //(a)
+        cr.crectangle(); //(b)
+        cr.This(); //(c)
     }
 }
-
-/* 試設計建構元 CRectangle(int w,int h)，呼叫時，自動設定 width = w， hright = h 
-再設一個沒有引數的建構元CRectangle()，呼叫時設定width=10，height=8(不能用this)
-width和height請用this設定*/
